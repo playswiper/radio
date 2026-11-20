@@ -18,21 +18,21 @@ main{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.panel{background
 @media(max-width:760px){.wrap{padding:16px 12px 40px}main{grid-template-columns:1fr}.side{grid-template-columns:1fr}.panel{padding:14px}.playerbox{min-height:190px}.top{margin-bottom:15px}.brand h1{font-size:20px}.now{margin:12px 0}.songtitle{font-size:18px}}
 </style></head>
 <body><div class="wrap">
-<header class="top"><div class="brand"><img class="logo" src="https://raw.githubusercontent.com/playswiper/Swiper/main/Images/RadioMusicIcon.svg" alt="Swiper Radio"><div><h1>Swiper Radio</h1><p>Big screen</p></div></div><div class="status" id="connection">Connecting…</div></header>
+<header class="top"><div class="brand"><img class="logo" src="https://raw.githubusercontent.com/playswiper/Swiper/main/Images/RadioMusicIcon.svg" alt="Swiper Radio"><div><h1>Swiper Radio</h1><p></p></div></div><div class="status" id="connection">Connecting…</div></header>
 <main>
 <section class="panel">
-<div class="sectionhead"><div><div class="eyebrow"></div><h2>Now playing</h2></div><span class="eyebrow" id="liveLabel">Global Sync</span></div>
+<div class="sectionhead"><div><div class="eyebrow"></div><h2>Now playing</h2></div><span class="eyebrow" id="liveLabel"></span></div>
 <div class="playerbox" id="playerbox"><div class="playerplaceholder" id="playerplaceholder"><img id="stageArtwork" src="https://raw.githubusercontent.com/playswiper/Swiper/main/Images/RadioMusicIcon.svg" alt="Swiper Radio music icon"><span id="stageTitle">Loading global audio…</span></div><audio id="radioAudio" preload="none" playsinline></audio></div>
 <div class="now"><img class="cover" id="cover" src="" alt=""><div style="min-width:0;flex:1"><div class="songtitle" id="songtitle">Loading station…</div><div class="artist" id="artist">Getting the current song</div></div></div>
 <div class="progress"><span id="progressbar"></span></div><div class="time"><span id="elapsed">0:00</span><span id="remaining">-0:00 left - 0:00</span></div>
-<div class="controls" style="margin-top:14px"><button class="primary" id="playBtn">Play</button><button id="skipBtn">Vote Skip <span id="votes">0</span>/3</button><div class="skipline" id="playState">Waiting for station</div></div>
+<div class="controls" style="margin-top:14px"><button class="primary" id="playBtn">Play</button><button id="skipBtn">Vote Skip Song (<span id="votes">0</span>/3)</button><div class="skipline" id="playState">Loading...</div></div>
 <p class="notice">Powered By: Audius</p>
 </section>
 <aside class="side">
-<section class="panel"><div class="sectionhead"><div><div class="eyebrow">Pick a song</div><h2>Request a track</h2></div></div>
+<section class="panel"><div class="sectionhead"><div><div class="eyebrow"></div><h2>Choose A Song</h2></div></div>
 <input class="search" id="search" placeholder="Search 200,000+ songs…" aria-label="Search all songs" style="margin-top:12px">
 <div class="tracklist" id="tracklist"><div class="empty">Search the full Audius catalog.</div></div><button id="loadMore" style="width:100%;margin-top:10px" hidden>Load more</button></section>
-<section class="panel"><div class="sectionhead"><div><div class="eyebrow">Up next</div><h2>Queue</h2></div><span class="eyebrow" id="queueCount">0 Songs</span></div><div class="queue" id="queue"><div class="empty">The queue is empty.</div></div></section>
+<section class="panel"><div class="sectionhead"><div><div class="eyebrow"></div><h2>Queue</h2></div><span class="eyebrow" id="queueCount">0 Songs</span></div><div class="queue" id="queue"><div class="empty">The queue is empty.</div></div></section>
 </aside></main>
 
 </div>
