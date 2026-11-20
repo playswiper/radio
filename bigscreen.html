@@ -44,7 +44,7 @@ const $=id=>document.getElementById(id),db=window.supabase.createClient(SUPABASE
 let tracks=[],station=null,currentTrack=null,searchTimer=0,searchToken=0,searchOffset=0,lastSearchQuery="",searchResults=[],lastSearchBatch=[],localPlaying=false,lastDriftCheck=0;
 const voterKey=(()=>{let v=localStorage.getItem('radio-voter-key');if(!v){v=crypto.randomUUID();localStorage.setItem('radio-voter-key',v)}return v})();
 const fmt=n=>{n=Math.max(0,Math.floor(Number(n)||0));return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')};
-function setStatus(t,ok=true){$('connection').textContent=(ok?'● ':'○ ')+t;$('connection').style.color=ok?'var(--green)':'#e5b37d';$('playState').textContent=t}
+function setStatus(t,ok=true){$('connection').textContent=(ok?' ':' ')+t;$('connection').style.color=ok?'var(--green)':'#e5b37d';$('playState').textContent=t}
 function elapsed(){return station?.started_at?Math.max(0,(Date.now()-new Date(station.started_at).getTime())/1000):0}
 function art(t){const a=t?.artwork_url;return typeof a==='string'?a:(a?.['480x480']||a?.['150x150']||a?.['1000x1000']||'')}
 function artist(t){return t?.user?.name||t?.artist||'Unknown artist'}
