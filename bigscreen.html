@@ -20,14 +20,14 @@ main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items
 /* Big Screen: keep the player and queue inside one viewport */
 @media (min-width:761px){
 html,body{width:100%;height:100%;min-height:0;overflow:hidden}
-.wrap{width:100%;max-width:none;height:100dvh;min-height:0;padding:12px 16px;display:flex;flex-direction:column;overflow:hidden}
+.wrap{width:100%;max-width:1560px;margin:0 auto;height:100dvh;min-height:0;padding:16px 22px;display:flex;flex-direction:column;overflow:hidden}
 .top{flex:0 0 auto;margin-bottom:10px;min-height:46px}
 main{flex:1 1 auto;min-height:0;grid-template-columns:minmax(0,1fr) minmax(260px,320px);gap:12px;overflow:hidden}
 .panel{min-height:0;min-width:0;padding:14px;overflow:hidden}
 main>section{display:flex;flex-direction:column;min-height:0}
 .sectionhead{flex:0 0 auto;margin-bottom:8px}
-.playerbox{flex:1 1 auto;min-height:150px;max-height:none;aspect-ratio:auto;width:100%;max-width:none}
-.playerplaceholder img{width:min(30vh,210px);max-height:30vh}
+.playerbox{flex:0 1 auto;min-height:0;height:auto;max-height:min(58vh,560px);aspect-ratio:16/9;width:100%;max-width:900px;margin:auto}
+.playerplaceholder img{width:min(24vh,190px);max-height:24vh}
 .now{flex:0 0 auto;margin:8px auto 4px}
 .songtitle{font-size:clamp(18px,2vw,25px)}
 .progress{flex:0 0 auto;margin:7px 0 3px}
@@ -36,7 +36,7 @@ main>section{display:flex;flex-direction:column;min-height:0}
 .queue{flex:1 1 auto;min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain}
 }
 @media (max-height:620px) and (min-width:761px){
-.wrap{padding:8px 12px}.top{margin-bottom:6px;min-height:38px}.logo{width:34px;height:34px;flex-basis:34px}.brand h1{font-size:19px}.panel{padding:10px}.sectionhead{margin-bottom:5px}.now{margin:5px auto 2px}.playerplaceholder img{width:min(24vh,150px);max-height:24vh}.big-play{bottom:12px;padding:9px 18px}
+.wrap{padding:8px 12px}.top{margin-bottom:6px;min-height:38px}.logo{width:34px;height:34px;flex-basis:34px}.brand h1{font-size:19px}.panel{padding:10px}.sectionhead{margin-bottom:5px}.now{margin:5px auto 2px}.playerplaceholder img{width:min(20vh,150px);max-height:20vh}.big-play{bottom:12px;padding:9px 18px}
 }
 </style></head>
 <body><div class="wrap">
